@@ -38,7 +38,7 @@ class App extends Component {
         uniqueId,
       } = this.state;
 
-      const newTasks = tasks.filter((n) => n.id != id)
+      const newTasks = tasks.filter((n) => n.id !== id)
 
       this.setState({
         tasks: newTasks,

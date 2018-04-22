@@ -2,15 +2,22 @@ import React, { Component } from 'react';
 
 class TodoItem extends Component {
     
-    handleClick(e) {
+    constructor(props) {
+        super(props);
 
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e) {
+        const id = this.props.id;
+        this.props.removeTodo(id);
     }
 
     render() {
         return (
             <li>
                 {this.props.title}
-                <button>
+                <button onClick={this.handleClick}>
                     Delete
                 </button>
             </li>
