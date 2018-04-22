@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class TodoItem extends Component {
+    
+    handleClick(e) {
+
+    }
+
     render() {
         return (
             <li>
